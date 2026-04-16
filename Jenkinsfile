@@ -23,7 +23,7 @@ pipeline {
         stage('Secret Detection with Gitleaks') {
             steps {
                 echo '🔍 Scanning for hardcoded secrets...'
-                bat 'gitleaks detect --source . --verbose --exit-code 1'
+                bat 'C:\\Users\\nkson\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Gitleaks.Gitleaks_Microsoft.Winget.Source_8wekyb3d8bbwe\\gitleaks.exe detect --source . --verbose --exit-code 1'
                 echo '✅ No secrets found!'
             }
         }
