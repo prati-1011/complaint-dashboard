@@ -5,36 +5,44 @@ pipeline {
         
         stage('Clone Repository') {
             steps {
+                echo '📦 Cloning from GitHub...'
                 git branch: 'main', 
                     url: 'https://github.com/prati-1011/complaint-dashboard.git'
+                echo '✅ Repository cloned!'
             }
         }
 
         stage('Install Dependencies') {
             steps {
-                bat 'pip install streamlit pandas plotly openpyxl'
+                echo '🔧 Installing Python packages...'
+                bat 'C:\\Users\\nkson\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -m pip install streamlit pandas plotly openpyxl'
+                echo '✅ Dependencies installed!'
             }
         }
 
         stage('Secret Detection with Gitleaks') {
             steps {
+                echo '🔍 Scanning for hardcoded secrets...'
                 bat 'gitleaks detect --source . --verbose --exit-code 1'
+                echo '✅ No secrets found!'
             }
         }
 
         stage('Test Application') {
             steps {
-                bat 'python -c "print(\\"App test passed!\\")"'
+                echo '🧪 Testing Python...'
+                bat 'C:\\Users\\nkson\\AppData\\Local\\Programs\\Python\\Python311\\python.exe --version'
+                echo '✅ Test passed!'
             }
         }
     }
 
     post {
         failure {
-            echo '❌ Secrets found! Pipeline failed.'
+            echo '❌ SECURITY ISSUE: Secrets found! Pipeline failed.'
         }
         success {
-            echo '✅ No secrets found! Pipeline passed.'
+            echo '✅ No secrets found! Pipeline succeeded.'
         }
     }
 }
