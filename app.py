@@ -1,4 +1,4 @@
-# # FAKE SECRET FOR DEMO
+#  FAKE SECRET FOR DEMO
 # API_SECRET = "sk_test_12345_abcde"
 
 import streamlit as st
