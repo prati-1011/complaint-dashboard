@@ -1,1 +1,44 @@
-[]
+[
+ {
+  "RuleID": "generic-api-key",
+  "Description": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.",
+  "StartLine": 2,
+  "EndLine": 2,
+  "StartColumn": 2,
+  "EndColumn": 35,
+  "Match": "API_SECRET = \"sk_test_12345_abcde\"",
+  "Secret": "sk_test_12345_abcde",
+  "File": "app.py",
+  "SymlinkFile": "",
+  "Commit": "e2482fdbbbada04dfaeecbb4edf39c6724dd3616",
+  "Link": "https://github.com/prati-1011/complaint-dashboard/blob/e2482fdbbbada04dfaeecbb4edf39c6724dd3616/app.py#L2",
+  "Entropy": 3.6818807,
+  "Author": "Neha Soni",
+  "Email": "your.email@example.com",
+  "Date": "2026-04-16T16:51:25Z",
+  "Message": "DEMO: Adding fake secret",
+  "Tags": [],
+  "Fingerprint": "e2482fdbbbada04dfaeecbb4edf39c6724dd3616:app.py:generic-api-key:2"
+ },
+ {
+  "RuleID": "generic-api-key",
+  "Description": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.",
+  "StartLine": 2,
+  "EndLine": 2,
+  "StartColumn": 4,
+  "EndColumn": 37,
+  "Match": "API_SECRET = \"sk_test_12345_abcde\"",
+  "Secret": "sk_test_12345_abcde",
+  "File": "app.py",
+  "SymlinkFile": "",
+  "Commit": "859fc6cba6a7524c8d12a69e18a2bba74edbea1a",
+  "Link": "https://github.com/prati-1011/complaint-dashboard/blob/859fc6cba6a7524c8d12a69e18a2bba74edbea1a/app.py#L2",
+  "Entropy": 3.6818807,
+  "Author": "Neha Soni",
+  "Email": "your.email@example.com",
+  "Date": "2026-04-16T17:08:29Z",
+  "Message": "FIX: Remove fake secret",
+  "Tags": [],
+  "Fingerprint": "859fc6cba6a7524c8d12a69e18a2bba74edbea1a:app.py:generic-api-key:2"
+ }
+]
